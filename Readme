@@ -1,5 +1,5 @@
 Script Information: 
-PowerShell Script Name: Exec_DBA_AgLoginSidCheck.ps1
+PowerShell Script Name: AgLoginSidCheck.ps1
 Stored Procedure Name: usp_SendAgSidMismatchReport
 Agent Job Name: ExecDBAagLoginSidCheck 
  
