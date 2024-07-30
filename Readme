@@ -1,18 +1,18 @@
 Script Information: 
 PowerShell Script Name: AgLoginSidCheck.ps1
 Stored Procedure Name: usp_SendAgSidMismatchReport
-Agent Job Name: ExecDBAagLoginSidCheck 
+
  
 PowerShell Script:
-To collect the data, a PowerShell script has been created. This script compares the login SIDs across the primary and secondary servers in our AG sets and identifies any mismatches or missing logins. 
+A PowerShell script has been created to collect the data. This script compares the login SIDs across our AG sets' primary and secondary servers and identifies any mismatches or missing logins. 
 The results are then stored in the loginSidCheckAg table in the DBA database.
 
 Stored Procedure: 
 The procedure checks for Login SID mismatches or missing logins in Availability Group (AG) servers and sends an HTML email report if such issues are found in the loginSidCheckAg table.
 •	Weekly Check: Runs weekly(Monday at 7 am) to identify login SID mismatches or missing logins.
-•	HTML Report: Sends an email report if discrepancies are found.
+•	HTML Report: Send an email report if discrepancies are found.
 •	No Issues: Logs a message if all logins are in sync.
 
 Email Notification:
-The email report will be sent from the profile PROD DBA and will be directed to <email> by default. 
-Email report will only be generated if there is a mismatch found or login missing. 
+The email report will be sent from the PROD DBA profile and directed to <email> by default. 
+Email reports will only be generated if a mismatch is found or a login is missing. 
